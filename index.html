@@ -118,6 +118,23 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2.2;stroke
 .x3{display:inline-flex;gap:4px;margin-left:auto;font-size:30px}
 .x3 i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:#fff;font-style:normal}
 
+/* test out */
+.to-yes{display:flex;flex-direction:column;gap:10px}
+.to-yes div{display:flex;align-items:center;gap:14px;background:var(--soft);border-radius:16px;padding:12px 16px;font-size:1.05rem}
+.to-yes svg{color:var(--green);font-size:1.8rem}
+.to-yes small{display:block;font-size:.9rem;color:var(--muted);font-weight:700}
+.to-no{display:flex;gap:14px;align-items:flex-start;background:var(--coral-soft);border-radius:16px;padding:14px 16px;font-size:1rem}
+.to-no .x{width:30px;height:30px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;flex:none;font-family:"Lilita One","Arial Rounded MT Bold",sans-serif;font-size:1.1rem}
+.to-no .why{color:var(--muted);font-weight:700;display:block;font-size:.92rem;margin-top:4px}
+.ask .mail{font-size:.84rem;overflow-wrap:normal;word-break:normal}
+.ask{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:640px){.ask{grid-template-columns:1fr}}
+.ask > *{background:var(--soft);border:2px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:4px;color:var(--ink);text-decoration:none}
+.ask a:hover,.ask a:focus-visible{border-color:var(--blue);outline:none}
+.ask b{font-family:"Lilita One","Arial Rounded MT Bold",sans-serif;font-weight:400;font-size:1.2rem}
+.ask span{font-size:.92rem;color:var(--muted);overflow-wrap:anywhere}
+.ask .go{color:var(--blue);font-weight:900}
+
 /* guides */
 details{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:4px 22px}
 summary{cursor:pointer;padding:16px 0;font-family:"Lilita One","Arial Rounded MT Bold",sans-serif;font-size:1.4rem;list-style:none;display:flex;align-items:center;gap:10px}
@@ -227,6 +244,23 @@ summary:focus-visible{outline:4px solid var(--blue);outline-offset:4px;border-ra
       <div><span class="n">3</span><span>Beat <span class="bn">Titan</span> 3 times.</span><span class="x3" id="x3" aria-hidden="true"></span></div>
     </div>
     <p style="text-align:center">Then that test comes back. Pass it to keep going.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-to">
+    <div class="outrow"><svg class="i pic" style="color:var(--blue)"><use href="#i-paper"/></svg><div><h2 id="h-to">Want a test sooner? Ask for a test out</h2><p>A test out is a test you ask for yourself.</p></div></div>
+    <p style="font-family:'Lilita One','Arial Rounded MT Bold',sans-serif;font-size:1.25rem">You can ask when:</p>
+    <div class="to-yes">
+      <div><svg class="i"><use href="#i-check"/></svg><p>It's your first test out in this grade<small>You get one “no questions asked” test out per grade.</small></p></div>
+      <div><svg class="i"><use href="#i-check"/></svg><p>Something went wrong on your test<small>The test glitched, or you had to stop suddenly.</small></p></div>
+      <div><svg class="i"><use href="#i-check"/></svg><p>You already beat <span class="bn">Titan</span> for that operation in the game</p></div>
+    </div>
+    <div class="to-no"><span class="x" aria-hidden="true">✕</span><p>It won't be approved if you already used your free test out in this grade <b>and</b> haven't beaten <span class="bn">Titan</span> for that operation yet.<span class="why">The real test is harder than the game, so passing it without beating the boss first almost never happens.</span></p></div>
+    <p style="font-family:'Lilita One','Arial Rounded MT Bold',sans-serif;font-size:1.25rem">How to ask (a guide can help):</p>
+    <div class="ask">
+      <a href="https://alpha-academic-dashboard.vercel.app/test-out-requests" target="_blank" rel="noopener"><b>Request form</b><span>alpha-academic-dashboard.vercel.app/test-out-requests</span><span class="go">Open the form →</span></a>
+      <div><b>DRI request</b><span>Send it through a DRI request.</span></div>
+      <div><b>FastMath DRI</b><span>Contact Julian directly:</span><span class="go mail" style="user-select:all">julian.hernandez<wbr>@alpha.school</span></div>
+    </div>
   </section>
 
   <details>
