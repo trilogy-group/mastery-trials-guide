@@ -148,6 +148,13 @@ summary:focus-visible{outline:4px solid var(--blue);outline-offset:4px;border-ra
 .faq span{color:var(--muted)}
 .src{font-size:.8rem;color:var(--muted);font-weight:600;text-align:center}
 @media (prefers-reduced-motion:no-preference){.grades button{transition:transform .15s,background .15s}}
+/* top tabs */
+.top{display:flex;flex-direction:column;align-items:center;gap:16px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%;max-width:560px;background:var(--card);border:2px solid var(--line);border-radius:999px;padding:6px}
+.tabs a{display:flex;align-items:center;justify-content:center;min-height:52px;padding:6px 12px;border-radius:999px;text-align:center;text-decoration:none;color:var(--muted);font-family:"Lilita One","Arial Rounded MT Bold",sans-serif;font-size:1.15rem;line-height:1.05}
+.tabs a[aria-current="page"]{background:var(--ink);color:var(--card)}
+.tabs a:not([aria-current]):hover{background:var(--soft);color:var(--ink)}
+.tabs a:focus-visible{outline:4px solid var(--blue);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -175,8 +182,12 @@ summary:focus-visible{outline:4px solid var(--blue);outline-offset:4px;border-ra
 </svg>
 
 <div class="wrap">
-  <header style="display:flex;flex-direction:column;gap:10px">
-    <h1>How to get your FastMath test</h1>
+  <header class="top">
+    <h1>Math Raiders</h1>
+    <nav class="tabs" aria-label="Math Raiders guide">
+      <a href="xp.html">How to get XP</a>
+      <a href="./" aria-current="page">How to get a test</a>
+    </nav>
     <p class="sub">Beat the bosses in Math Raiders. The game sends you the test.</p>
   </header>
 
